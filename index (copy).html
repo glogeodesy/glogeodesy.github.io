@@ -1,0 +1,97 @@
+---
+layout: none
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>GLONASS Frequency Channels</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="geodesy,cgu,glonass" />
+<meta name="description" content="geodesy,glonass,satellite,frequency,channel" />
+<style type="text/css">
+body{font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Georgia,Helvetica, Arial, sans-serif;background-color:#eee;margin:0;padding:0;border-top:#099 6px solid;font-size:20px;color:#666;} 
+#main{margin:30px 15px;}
+h1{color:#099;font-size:38px;}
+h2{color:#666;font-size:30px;}
+p{text-align: justify;line-height:30px;} 
+table.glodata{border-collapse: collapse;border:none;line-height: 30px;}
+td.glo{height:35px;border:#aaa 1px solid;padding:5px 10px;font-size:20px;}
+ul li{line-height:30px;}
+a{color:#099;text-decoration:none;}
+a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+<div id="main">
+	<h1>GLONASS Frequency Channels</h1>
+	<h2>Purpose</h2>
+	<p>GLONASS is different from GPS, especially the FDMA. We need to determine the frequecy channels of GLONASS satellites firstly if we want to using GLONASS data to positioning, navigation,timing and do something else such as ionosphere modeling, troposphere monitoring and so on. Obviously, GNSS receiver receives the frequency channels through broadcast ephemeris. We actually don't have to use the navigation file to get frequencies of satellites everytime when data processing. Because the frequency channels won't be changed until the satellite is replaced by a new satellite.</p>
+	<p>Therefore, a program is developed and running on server. It tracks the official information of GLONASS and generates a file(glo.dat) which records frequency channels of GLONASS satellites. The file is updated everyday automatically. The value is not available if a satellite frequency channel is 99.</p>
+	<h2>Update News</h2>
+	<ul>
+		<li>2015-03-10, GFC service V2.0 updated</li>
+		<li>2014-08-14, Source Code hosted on Github</li>
+		<li>2013-10-04, More languages implementation for reading glo.dat</li>
+		<li>2013-06-10, GFC service started.</li>
+	</ul>
+	<h2>GFC V2.0 Features</h2>
+	<ul>
+		<li>tracking broadcast ephemeris instead of *.glo</li>
+		<li>extending to track all new satellites, not just original 24 satellites</li>
+		<li>Website is hosted on Github in order to get rid of PHP code, XML and VPS</li>
+	</ul>
+	<h2>Download GFC File</h2>
+	<p>updated at: <em>{% include update_time.html %} UTC</em>, <a href="http://glo.geodesy.cn/glo.dat">http://glo.geodesy.cn/glo.dat</a></p>
+	<h2>Format Description</h2>
+	<table class="format">
+		<tr>
+			<td>+------+</td>
+			<td>------------------------------------------------------------------------------------------------</td>
+			<td>+-----------------+</td>
+		</tr>
+		<tr>
+			<td>| Date |</td>
+			<td>2013 03 01</td>
+			<td>| I4, 2(1X,I2) &nbsp;&nbsp;|</td>
+		</tr>
+		<tr>
+			<td>| GFC |</td>
+			<td>01 -4 05 06 01 -4 05 06 -2 -7 00 -1 -2 -7 00 -1 04 -3 03 02 04 -3 03 02</td>
+			<td>| I2, 23(1X,I2) |</td>
+		</tr>
+		<tr>
+			<td>+------+</td>
+			<td>------------------------------------------------------------------------------------------------</td>
+			<td>+-----------------+</td>
+		</tr>
+	</table>
+	<h2>Source Code</h2>
+	<ul>
+		<li>C++: <a href="code/glo_cpp.tar.gz">glo_cpp.tar.gz</a> (by WANG Cheng, updated at 2015-03-05)</li><!--
+		<li>Matlab: <a href="code/glo_m.tar.gz">glo_m.tar.gz</a> (by HU Hong, updated at 2015-03-05)</li>
+		<li>Fortran: <a href="code/glo_f90.tar.gz">glo_f90.tar.gz</a> (by ZHOU Feng, updated at 2015-03-05)</li>
+		<li>Python: <a href="code/glo_py.tar.gz">glo_py.tar.gz</a> (by ZHOU Feng, updated at 2015-03-05)</li>
+		<li>C: <a href="code/glo_c.tar.gz">glo_c.tar.gz</a> (by TANG Xu, updated at 2015-03-05)</li>-->
+	</ul>
+	<h2>Usage</h2>
+	<h2>GFC List</h2>
+	<p><strong style="color:red">Caution:</strong> The frequecy channels will be changed when one satellite replaced by a new satellite. The same PRN of two satellites(the old one and the new satellite) probably have two groups of different frequecy channels in one day. We suggest downloading the broadcast ephemeris to get the frequecy channels of GLONASS satellites when processing data on the day which is recorded in "glo.dat".</p>
+	<table class="glodata">
+		<tr>
+			<th>Date</th>
+			<th>Channels</th>
+		</tr>
+	{% for item in site.data.glo %}
+		<tr>
+			<td class="glo glo_date"><strong>{{ item.date }}</strong></td>
+			<td class="glo glo_data">{{ item.data }}</td>
+		</tr>
+	{% endfor %}
+	</table>
+	<h2>Contact</h2>
+	<p>Email: ac@gnss.ac.cn</p>
+	<p>Phone: +86 13886095630</p>
+	<h6>&copy;2015. Made by Acheng. Powered by Github.</h6>
+</div>
+</body>
+</html>
