@@ -1,4 +1,4 @@
 #!/bin/bash
-git add --all
+git add /home/ac/Documents/glo.geodesy.cn/
 git commit -m "update"
 git push origin master
