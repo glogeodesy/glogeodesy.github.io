@@ -16,6 +16,7 @@ h2{color:#666;font-size:30px;}
 p{text-align: justify;line-height:30px;} 
 table.glodata{border-collapse: collapse;border:none;line-height: 30px;}
 td.glo{height:35px;border:#aaa 1px solid;padding:5px 10px;font-size:20px;}
+td.glo_data{font-family:Monospace,Fixedsys,Consolas,Monaco,Lucida Console,sans-serif;}
 ul li{line-height:30px;}
 a{color:#099;text-decoration:none;}
 a:hover{text-decoration:underline;}
@@ -42,7 +43,7 @@ a:hover{text-decoration:underline;}
 	</ul>
 	<h2>Download GFC File</h2>
 	<p>updated at: <em>{% include update_time.html %} UTC</em>, <a href="http://glo.geodesy.cn/glo.dat">http://glo.geodesy.cn/glo.dat</a></p>
-	<h2>Format Description</h2><!--
+	<h2>Format Description</h2>
 	<table class="format">
 		<tr>
 			<td>+------+</td>
@@ -64,7 +65,7 @@ a:hover{text-decoration:underline;}
 			<td>------------------------------------------------------------------------------------------------</td>
 			<td>+-----------------+</td>
 		</tr>
-	</table>-->
+	</table>
 	<h2>Source Code</h2>
 	<ul>
 		<li>C++: <a href="code/glo_cpp.tar.gz">glo_cpp.tar.gz</a> (by WANG Cheng, updated at 2015-03-05)</li><!--
