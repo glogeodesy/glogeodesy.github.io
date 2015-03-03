@@ -3,7 +3,7 @@ acex                acheng              20150302 09:37:17UTCPGM / RUN BY / DATE
 GLONASS Frequency Channels (GFC) are generated using data   COMMENT
 from official information of GLONASS. This file constains   COMMENT
 all latest data in the form of a set of date and frequency  COMMENT
-channels of 24 satellites. All satellites' frequency        COMMENT
+channels of satellites. All satellites' frequency           COMMENT
 channels remain unchanged until the date in next set.       COMMENT
 99, if no value available                                   COMMENT
 Contact address: ac@gnss.ac.cn                              COMMENT
