@@ -14,8 +14,8 @@ body{font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",Georgia,H
 h1{color:#099;font-size:38px;}
 h2{color:#666;font-size:30px;}
 p{text-align: justify;line-height:30px;} 
-table.glodata{border-collapse: collapse;border:none;line-height: 30px;}
-td.glo{height:35px;border:#aaa 1px solid;padding:5px 10px;font-size:20px;}
+table.glodata,table.format{border-collapse: collapse;border:none;line-height: 30px;}
+td.glo,.format td{height:35px;border:#aaa 1px solid;padding:5px 10px;font-size:16px;}
 td.glo_data{font-family:Monospace,Lucida Console,Consolas,"Courier New",Fixedsys,Monaco,sans-serif;}
 ul li{line-height:30px;}
 a{color:#099;text-decoration:none;}
@@ -46,24 +46,14 @@ a:hover{text-decoration:underline;}
 	<h2>Format Description</h2>
 	<table class="format">
 		<tr>
-			<td>+------+</td>
-			<td>------------------------------------------------------------------------------------------------</td>
-			<td>+-----------------+</td>
-		</tr>
-		<tr>
-			<td>| Date |</td>
+			<td>Date</td>
 			<td>2013 03 01</td>
-			<td>| I4, 2(1X,I2) &nbsp;&nbsp;|</td>
+			<td>I4, 2(1X,I2) </td>
 		</tr>
 		<tr>
-			<td>| GFC |</td>
+			<td>GFC</td>
 			<td>01 -4 05 06 01 -4 05 06 -2 -7 00 -1 -2 -7 00 -1 04 -3 03 02 04 -3 03 02</td>
-			<td>| I2, 23(1X,I2) |</td>
-		</tr>
-		<tr>
-			<td>+------+</td>
-			<td>------------------------------------------------------------------------------------------------</td>
-			<td>+-----------------+</td>
+			<td>I2, 23(1X,I2)</td>
 		</tr>
 	</table>
 	<h2>Source Code</h2>
