@@ -1,5 +1,5 @@
      3.01  GLONASS FREQUENCY CHANNEL    R                   RINEX VERSION / TYPE
-acex                acheng              20160127 06:00:01UTCPGM / RUN BY / DATE
+acex                acheng              20160128 06:00:01UTCPGM / RUN BY / DATE
 GLONASS Frequency Channels (GFC) are generated using data   COMMENT
 from official information of GLONASS. This file constains   COMMENT
 all latest data in the form of a set of date and frequency  COMMENT
@@ -8,7 +8,7 @@ channels remain unchanged until the date in next set.       COMMENT
 99, if no value available                                   COMMENT
 Contact address: ac@gnss.ac.cn                              COMMENT
 Web page:        http://glo.geodesy.cn                      COMMENT
-2016 01 27                                                  UNTIL THE DATE
+2016 01 28                                                  UNTIL THE DATE
                                                             END OF HEADER
 2005 01 01
 99 04 12 06 02 01 99 99 99 99 99 99 99 99 99 99 05 10 99 99 05 10 11 03
@@ -150,3 +150,5 @@ Web page:        http://glo.geodesy.cn                      COMMENT
 01 -4 05 06 01 -4 05 06 -2 -7 00 -1 -2 -7 00 -1 01 -3 03 02 04 -3 03 02 -6 -5 07 04 -7
 2015 12 27
 01 -4 05 06 01 -4 05 06 -2 -7 00 -1 -2 -7 00 -1 -2 -3 03 02 04 -3 03 02 -6 -5 07 04 -7
+2016 01 28
+01 -4 05 06 01 -4 05 06 -2 -7 00 -1 -2 -7 00 -1 -6 -3 03 02 04 -3 03 02 -6 -5 07 04 -7
